@@ -156,7 +156,10 @@ body{
         #6A4FCB 50%,
         #4E68C8 75%,
         #2E77D0 100%);
-
+    /* box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25); */
+    box-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.18), 
+    0 8px 24px rgba(0, 0, 0, 0.20);
 }
 .fa-heart{
     color: white;
@@ -185,6 +188,7 @@ body{
     justify-content: start;
     align-items: center;
     gap: 0.8rem;
+    
 }
 .desc{
     font-size: 15px;
