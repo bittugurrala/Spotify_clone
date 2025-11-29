@@ -19,7 +19,7 @@ body{
 }
 
 .layout{
-    height: 100vh;
+    min-height: 100vh;
     display: grid;
     grid-template-columns: 275px 1fr;
     grid-template-rows: 115px 1fr 100px;
@@ -218,6 +218,10 @@ body{
 }
 .list7{
     background-image: url("assests/Thaman.png");
+    background-size: cover;
+}
+.list8{
+    background-image: url("assests/Harsha.png");
     background-size: cover;
 }
 
