@@ -7,6 +7,7 @@
     --icon-after: black;
     --heading-font-weight: 600;
     --button-background : #DCDCDC;
+    --playlist-desc: 11px;
 
 }
 
@@ -141,8 +142,83 @@ body{
 }
 .recent-span{
     font-size: 13px;
+}
+.thumbnail{
+    width: 40px;
+    height: 40px;
+    border-radius: 0.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom right,
+        #5038A0 0%,
+        #5C3EBF 25%,
+        #6A4FCB 50%,
+        #4E68C8 75%,
+        #2E77D0 100%);
+
+}
+.fa-heart{
+    color: white;
+}
+.fa-thumbtack{
+    transform: rotate(45deg);
+    color: #8A7A4A;
+}
+.desc{
+    position: relative;
+}
+.fa-circle{
+    font-size: 2px;
     position: absolute;
-    left: 195px;
+    top:45px;
+    left: 54px; 
+}
+.songs-count{
+    font-size: var(--playlist-desc);
+    color: var(--icon-before);
+    margin-top:-10px;
+}
+.playlist{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 0.8rem;
+}
+.desc{
+    font-size: 15px;
+}
+.list1{
+    background-image: url("assests/DrumPractice.png");
+    background-size: cover;
+}
+.list2{
+    background-image: url("assests/Anirudh.png");
+    background-size: cover;
+}
+.thumbnail2{
+    border-radius: 50%;
+}
+.list3{
+    background-image: url("assests/ARR.png");
+    background-size: cover;
+}
+.list4{
+    background-image: url("assests/Sai.png");
+    background-size: cover;
+}
+.list5{
+    background-image: url("assests/DSP.png");
+    background-size: cover;
+}
+.list6{
+    background-image: url("assests/Yuvan.png");
+    background-size: cover;
+}
+.list7{
+    background-image: url("assests/Thaman.png");
+    background-size: cover;
 }
 
 
@@ -154,4 +230,6 @@ body{
     grid-area: footer;
     background-color: var(--spotify-items-background);
 }
+
+
 
