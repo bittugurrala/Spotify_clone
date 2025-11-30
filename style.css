@@ -117,6 +117,13 @@ body{
     color : var(--icon-before);
     left: 240px;
 }
+.playlist-menu{
+    display: flex;
+    justify-content: space-evenly;
+    gap: .5rem;
+
+
+}
 
 .button{
     border:0;
@@ -127,7 +134,8 @@ body{
     border-radius: 1.5rem;
     background-color: var(--button-background);
     font-size: 12px;
-    color: black
+    color: black;
+    font-weight: bold
 }
 .mag-icon{
     position: relative;
@@ -139,14 +147,18 @@ body{
     align-items: center;
     justify-content: space-between;
     margin-top: 1rem ;
-    color: var(--icon-before)
+    color: var(--icon-before);
+
+}
+.desc{
+    font-weight: 500;
 }
 .recent-span{
     font-size: 13px;
 }
 .thumbnail{
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 0.3rem;
     display: flex;
     justify-content: center;
@@ -157,10 +169,7 @@ body{
         #6A4FCB 50%,
         #4E68C8 75%,
         #2E77D0 100%);
-    /* box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25); */
-    box-shadow: 
-    0 2px 8px rgba(0, 0, 0, 0.18), 
-    0 8px 24px rgba(0, 0, 0, 0.20);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
 }
 .fa-heart{
     color: white;
@@ -234,11 +243,122 @@ body{
 .main-container{
     grid-area: main;
     background-color: var(--spotify-items-background);
+    padding: 1rem;
 }
+.premium-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.arrow{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    /* height: 30px;
+    width: 60px; */
+}
+.arrow-container{
+    background-color: white;
+    border-radius: 50%;
+    /* padding: .5rem; */
+    /* width: 150px;
+    height: 150px; */
+}
+.fa-angle-left,
+.fa-angle-right, .bell{
+    color: var(--icon-before)
+}
+.premium-tab{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.prm-btn{
+    background-color: var(--icon-after);
+    color: white;
+
+}
+.Install-btn{
+    background-color: white;
+}
+.prm-btn, .Install-btn{
+    padding-left: .6rem;
+    padding-right: .6rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 20px;
+    border: 0;
+    font-weight: bold;
+
+}
+.download{
+    margin-right: .2rem;
+}
+.bell{
+    background-color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.profile{
+    height: 30px;
+    width: 30px;
+    background-color: orangered;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-weight: bold;
+}
+.album-menu{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+}
+.btn{
+    background-color: var(--icon-after);
+    color: white;
+}
+.album-menu{
+    margin-bottom: 25px;
+}
+.daily-mix{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(157px, 1fr));
+    grid-template-rows: repeat(2, 50px);
+    gap: 10px;
+}
+.mix{
+    background-color: var(--button-background);
+    border-radius: .3rem;
+    display: flex;
+    gap: 10px;
+}
+.mix-img{
+    width: 50px;
+    height: 50px;
+    border-top-left-radius: .3rem;
+    border-bottom-left-radius: .3rem;
+    box-shadow: 10px 0 20px rgba(0, 0, 0, 0.25);
+
+}
+.mix-name{
+    font-weight: bold;
+    font-size: 13px;
+}
+
+
 .footer-container{
     grid-area: footer;
     background-color: var(--spotify-items-background);
 }
+
 
 
 
