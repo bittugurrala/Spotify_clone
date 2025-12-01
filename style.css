@@ -22,7 +22,7 @@ body{
     min-height: 100vh;
     display: grid;
     grid-template-columns: 275px 1fr;
-    grid-template-rows: 115px 1fr 100px;
+    grid-template-rows: 115px 1fr auto;
     gap: 10px;
     border-radius: 10px;
     box-shadow: 10px ;
@@ -88,6 +88,7 @@ body{
     grid-area: sidebar;
     background-color: var(--spotify-items-background);
     padding:1rem;
+
 }
 .lib-menu{
     display: flex;
@@ -281,6 +282,7 @@ body{
 }
 .Install-btn{
     background-color: white;
+    color: var(--icon-after)
 }
 .prm-btn, .Install-btn{
     padding-left: .6rem;
@@ -353,7 +355,7 @@ body{
     font-size: 13px;
 }
 .made-for-you{
-    margin-top: 1.5rem;
+    /* margin-top: 1.5rem; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -367,7 +369,7 @@ body{
 .made-for-you-items{
     display: grid;
     grid-template-columns: repeat(7, minmax(150px, 170px));
-    /* grid-template-rows: 1fr; */
+    grid-template-rows: 1fr;
     gap: 10px;
     
 }
@@ -402,8 +404,38 @@ body{
 .footer-container{
     grid-area: footer;
     background-color: var(--spotify-items-background);
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
+.footer-content{
+    display: flex;
+    flex-direction: column;
 
+}
+.footer-container a{
+    margin-bottom: 1rem;
+}
+.footer-content2{
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.social-media{
+    height: 20px;
+    width: 20px;
+    padding: 10px;
+    background-color: var(--button-background);
+    border-radius: 50%;
+}
+.footer-container a{
+    text-decoration: None;
+    color: var(--icon-before);
+}
 
 
 
