@@ -122,6 +122,7 @@ body{
     display: flex;
     justify-content: space-evenly;
     gap: .5rem;
+    margin-bottom: 1rem;
 
 
 }
@@ -157,6 +158,13 @@ body{
 .recent-span{
     font-size: 13px;
 }
+.scrolling-sidebar-container{
+    height: 500px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    /* border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem; */
+}
 .thumbnail{
     width: 50px;
     height: 50px;
@@ -170,7 +178,7 @@ body{
         #6A4FCB 50%,
         #4E68C8 75%,
         #2E77D0 100%);
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.20);
 }
 .fa-heart{
     color: white;
@@ -239,12 +247,18 @@ body{
     background-image: url("assests/Harsha.png");
     background-size: cover;
 }
+.list9{
+    background-image: url("assests/vivek.png");
+    background-size: cover;
+}
 
 
 .main-container{
     grid-area: main;
     background-color: var(--spotify-items-background);
     padding: 1rem;
+    overflow-x: hidden;  /* To fix the Main-container from scrolling*/
+    overflow-y: scroll;
 }
 .premium-container{
     display: flex;
@@ -367,9 +381,12 @@ body{
     font-weight: bold;
 }
 .made-for-you-items{
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(7, minmax(150px, 170px));
-    grid-template-rows: 1fr;
+    grid-template-rows: 1fr; */
+    display: flex;
+    overflow-x: scroll ;
+    scrollbar-width: none;
     gap: 10px;
     
 }
@@ -398,6 +415,19 @@ body{
     font-weight: normal;
     font-size: small;
     color: var(--icon-before);
+}
+.jump-back-in-items{
+    /* display: grid;
+    grid-template-columns: repeat(7, minmax(150px, 170px));
+    grid-template-rows: 1fr; */
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    scrollbar-width: None;
+    gap: 10px;
+}
+.made-for-desc{
+    width: minmax(150px, 170px)
 }
 
 
