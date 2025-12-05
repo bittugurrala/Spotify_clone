@@ -7,6 +7,7 @@
     --icon-after: black;
     --heading-font-weight: 600;
     --button-background : #DCDCDC;
+    --button-hover-background : #C0C0C0;
     --playlist-desc: 11px;
 
 }
@@ -14,12 +15,14 @@
 body{
     background-color: var(--spotify-background);
     font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+    padding: 0;
 
 
 }
 
 .layout{
     min-height: 100vh;
+    overflow: hidden;
     display: grid;
     grid-template-columns: 275px 1fr;
     grid-template-rows: 115px 1fr auto;
@@ -63,23 +66,22 @@ body{
 .search-icon{
     margin-right: 0.9rem;
 }
-
-/* .home:hover .header-icon:hover{
-    color: var(--icon-after);
+.search {
+    display: flex;
+    gap: 6px;
+    cursor: pointer;
+    color: var(--icon-before);       
 }
-
-.home:hover .home-span:hover{
-    color: var(--icon-after);
-} */
-
-.search:hover .search-icon:hover{
-    color: var(--icon-after);
-}
-.search:hover .search-span:hover{
-    color: var(--icon-after);
+.search:hover .search-icon,
+.search:hover .search-span {
+    color: var(--icon-after);        /* color on hover */
+    transform: scale(1.05);
 }
 .fa-magnifying-glass{
     color: var(--icon-before);
+}
+.fa-magnifying-glass:hover{
+    color: var(--icon-after)
 }
 
 
@@ -90,6 +92,21 @@ body{
     padding:1rem;
 
 }
+.fa-solid{
+    transition: transform 0.2s ease;
+}
+/* all icons should change color when hovered */
+.fa-solid:not(.fa-play):hover , .fa-regular:hover{         
+    color: var(--icon-after);
+    transform: scale(1.05);
+}
+
+/* aside{
+    position: fixed;
+    left: 10px;
+    top: 120px;
+    height: cal(100vh-115px);
+} */
 .lib-menu{
     display: flex;
     flex-direction: row;
@@ -102,6 +119,10 @@ body{
     filter: brightness(0) invert(50%);
     position: relative;
 }
+.lib-icon:hover{
+    filter: brightness(50%) invert(0);
+    transform: scale(1.05);
+}
 .sidebar-heading{
     position: absolute;
     left: 60px;
@@ -113,20 +134,24 @@ body{
     left: 200px;
     color: var(--icon-before);
 }
+.fa-plus:hover{
+    color: var(--icon-after);
+    border-radius: 50%;
+}
 .fa-arrow-right{
     position: absolute;
     color : var(--icon-before);
     left: 240px;
+}
+.fa-arrow-right:hover{
+    color : var(--icon-after);
 }
 .playlist-menu{
     display: flex;
     justify-content: space-evenly;
     gap: .5rem;
     margin-bottom: 1rem;
-
-
 }
-
 .button{
     border:0;
     padding-left: 0.6rem;
@@ -137,7 +162,13 @@ body{
     background-color: var(--button-background);
     font-size: 12px;
     color: black;
-    font-weight: bold
+    font-weight: bold;
+    transition: transform 0.2s ease;
+}
+.button:not(.btn):hover{
+    background-color: var(--button-hover-background) ;
+    transform: scale(1.05);
+
 }
 .mag-icon{
     position: relative;
@@ -152,6 +183,13 @@ body{
     color: var(--icon-before);
 
 }
+.list-icon:hover .recent-span:hover,
+.recent-span:hover .fa-solid{
+    color: var(--icon-after);
+    transform: scale(1.05);
+}
+
+
 .desc{
     font-weight: 500;
 }
@@ -159,9 +197,10 @@ body{
     font-size: 13px;
 }
 .scrolling-sidebar-container{
-    height: 500px;
+    height: calc(100vh - 180px);
     overflow-y: scroll;
     scrollbar-width: none;
+
     /* border-top-left-radius: 1rem;
     border-top-right-radius: 1rem; */
 }
@@ -187,6 +226,9 @@ body{
     transform: rotate(45deg);
     color: #8A7A4A;
 }
+.fa-play{
+    font-size: 1.2rem;
+}
 .desc{
     position: relative;
 }
@@ -209,6 +251,26 @@ body{
     gap: 0.8rem;
     
 }
+.playlist-play{
+    color: white;
+    opacity: 0;
+}
+.playlist:hover{
+    /* background-color: #f6f6f6; */
+    opacity: 1;
+}
+
+.playlist-play{
+    color: white;
+    opacity: 0;
+}
+.playlist:hover .thumbnail{
+    filter: brightness(0.6) blur(0.3px);
+    margin-left: 3px;
+}
+.playlist:hover .playlist-play{
+    opacity: 1;
+}
 .desc{
     font-size: 15px;
 }
@@ -222,6 +284,7 @@ body{
 }
 .thumbnail2{
     border-radius: 50%;
+    transition: filter 0.25s ease;
 }
 .list3{
     background-image: url("assests/ARR.png");
@@ -292,7 +355,11 @@ body{
 .prm-btn{
     background-color: var(--icon-after);
     color: white;
+    transition: transform 0.2s ease;
 
+}
+.prm-btn:hover{
+    transform: scale(1.05);
 }
 .Install-btn{
     background-color: white;
@@ -348,6 +415,8 @@ body{
     display: grid;
     grid-template-columns: repeat(4, minmax(157px, 1fr));
     grid-template-rows: repeat(2, 50px);
+    overflow-x: scroll;
+    scrollbar-width: none;
     gap: 10px;
 }
 .mix{
@@ -438,6 +507,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    gap: 10px;
 }
 .footer-content{
     display: flex;
